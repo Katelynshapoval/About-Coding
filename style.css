@@ -1,0 +1,368 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: white;
+  background-image: url("https://img.freepik.com/free-vector/gradient-dark-dynamic-lines-background_23-2148995950.jpg?semt=ais_hybrid");
+  background-size: cover;
+}
+
+/* Image Styles */
+img {
+  height: 200px;
+  margin-top: 20px;
+}
+
+/* Navbar (Table of Contents) */
+#tableofContents {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  background-color: #000000;
+  z-index: 5;
+}
+
+#tableofContents ol {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 70px;
+  list-style: none;
+  gap: 20px;
+}
+
+#tableofContents ol li {
+  display: inline;
+}
+
+.navbarLink {
+  color: #ff2e63;
+  text-decoration: none;
+  transition: background-size 400ms;
+}
+
+.navbarLink {
+  background: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255)),
+    linear-gradient(
+      to right,
+      rgba(255, 0, 0, 1),
+      rgba(255, 0, 180, 1),
+      rgba(0, 100, 200, 1)
+    );
+  padding-bottom: 10px;
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+}
+
+.navbarLink:hover {
+  background-size: 0 3px, 100% 3px;
+}
+
+/* Main Content Styles */
+.main {
+  margin-top: 100px;
+}
+
+h1 {
+  text-align: center;
+}
+
+h3 {
+  margin-top: 12px;
+}
+
+p {
+  margin-top: 10px;
+  text-align: center;
+  font-family: Calibri;
+}
+
+/* Section Layout */
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 34px;
+  scroll-margin-top: 80px;
+}
+
+/* Programming Languages Section */
+.languagesList {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-top: 50px;
+}
+
+.languagesListItem {
+  height: 350px;
+  flex-basis: 300px;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid #ff2e63;
+  border-radius: 50px;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.7);
+}
+
+/* Individual Language Backgrounds */
+.python {
+  background-image: url("https://cdn.iconscout.com/icon/free/png-256/free-python-logo-icon-download-in-svg-png-gif-file-formats--brand-development-tools-pack-logos-icons-226051.png?f=webp&w=256");
+}
+
+.javascript {
+  background-image: url("https://static.vecteezy.com/system/resources/previews/027/127/463/original/javascript-logo-javascript-icon-transparent-free-png.png");
+}
+
+.java {
+  background-image: url("https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/181_Java_logo_logos-512.png");
+}
+
+.cPlus {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/3/32/C%2B%2B_logo.png");
+}
+
+.cSharp {
+  background-image: url("https://static-00.iconduck.com/assets.00/c-sharp-c-icon-912x1024-j3yidw37.png");
+}
+
+.ruby {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Ruby_logo.png/800px-Ruby_logo.png");
+}
+
+/* Description Section */
+.description {
+  display: flex;
+  border: 2px solid #f8f5f5;
+  box-shadow: rgba(255, 46, 99, 0.38) 0px 5px 15px;
+  padding: 40px;
+  margin-top: 20px;
+}
+
+.description p {
+  margin-right: 40px;
+  width: 300px;
+}
+
+/* Benefits Section */
+#benefits {
+  margin: 30px auto;
+}
+
+.benefitsList {
+  list-style: none;
+  width: 800px;
+  position: relative;
+}
+
+.benefitsList li {
+  margin-top: 30px;
+  width: 55%;
+  padding: 20px;
+  border: 2px solid white;
+  border-radius: 20px;
+  position: relative;
+}
+
+.benefitsList li:nth-child(even) {
+  text-align: right;
+  margin-left: auto;
+  border: 2px solid #ff2e63;
+  box-shadow: rgba(255, 46, 99, 0.38) 0px 5px 15px;
+}
+
+.benefitsList li:nth-child(odd) {
+  box-shadow: rgba(255, 255, 255, 0.38) 0px 5px 15px;
+}
+
+.benefitsList .number {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.left {
+  right: 31px;
+}
+
+.right {
+  left: 31px;
+}
+
+/* Outro Section */
+#outro p {
+  border: 2px solid white;
+  padding: 20px;
+  width: 70%;
+  margin-bottom: 50px;
+}
+
+/* Media Queries */
+@media (max-width: 900px) {
+  .benefitsList li {
+    width: 450px;
+    text-align: center;
+    margin: 20px auto;
+  }
+  .benefitsList li:nth-child(even) {
+    text-align: center;
+  }
+  .benefitsList {
+    width: 500px;
+  }
+
+  .description {
+    width: 600px;
+  }
+  .left {
+    left: -338px;
+  }
+  #tableofContents ol {
+    height: 150px;
+  }
+  .main {
+    margin-top: 170px;
+  }
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 700px;
+  height: 400px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.projectSlide {
+  display: none;
+}
+.slide {
+  width: 700px;
+  height: 400px;
+  /* background-color: #000000; */
+  /* background-image: url("https://onemob.com/wp-content/uploads/2022/12/1-Why-consultants-need-portfolios-1.png"); */
+  padding-top: 20px;
+  text-align: center;
+  position: relative;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+  background-size: cover;
+}
+.slideshow-container h1 {
+  margin: 20px;
+}
+#portfolio {
+  background-image: url("https://onemob.com/wp-content/uploads/2022/12/1-Why-consultants-need-portfolios-1.png");
+}
+#weather {
+  background-image: url("https://as2.ftcdn.net/v2/jpg/05/08/09/59/1000_F_508095918_EfLZJilo2BaKaceKcYJQEpuRBVO0TMlt.jpg");
+}
+#todo {
+  background-image: url("https://screenshots.codesandbox.io/iwfy7/46.png");
+}
+#calculator {
+  background-image: url("https://cdn.prod.website-files.com/63f8ca18cae2585db28fd75b/63f8ca18cae2581fd38fd87a_create-interactive-website-calculator-on-webflow.png");
+}
+#countdown {
+  background-image: url("https://s3.amazonaws.com/neowin/news/images/uploaded/2017/03/1490155165_screen_shot_2017-03-21_at_8.58.52_pm.jpg");
+}
+#picker {
+  background-image: url("https://assets.jetsloth.com/wp-content/uploads/2019/11/28135651/color-picker-launch.webp");
+}
+#chat {
+  background-image: url("https://cdn2.hubspot.net/hubfs/4016276/blog-images/2019/december/8%20Reasons%20Why%20You%20Need%20Website%20Live%20Chat%20Now/livechat-1.jpg");
+}
+#music {
+  background-image: url("https://d2nck0j18pxk6f.cloudfront.net/music/s3fs-public/images/webplayer/stingray-music_webplayer-2018-en.png");
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/8 etc) */
+.numbertext {
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  color: black;
+  color: white;
+  top: 65px;
+  z-index: 5;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 20px 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
